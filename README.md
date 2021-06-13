@@ -3,4 +3,4 @@ This is a highly secure end to end encyrpted messaging app
 
 ## Screenshots
 Login Screen
-![Login Screen](screenshots/testimage.jpg)
+![Login Screen](screenshots/firstloginscreen.jpg)
