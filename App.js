@@ -5,6 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import LogInScreen from './Screens/LogInScreen';
 import {createStackNavigator} from '@react-navigation/stack';
+import RegisterScreen from './Screens/RegisterScreen';
 
 const Stack = createStackNavigator();
 
@@ -25,6 +26,8 @@ export default function App() {
           title:"SIGNAL",
         }}
         name ="Login" component={LogInScreen}/>
+
+        <Stack.Screen name="Register" component= {RegisterScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

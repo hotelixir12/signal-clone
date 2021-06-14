@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet,Text, View } from 'react-native';
 import { Button, Input, Image } from 'react-native-elements';
 import { KeyboardAvoidingView } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 
-const LogInScreen = () => {
+const LogInScreen = ({navigation}) => {
     const [email, setEmail] = useState(""); 
     const [password, setPassword] = useState("");
     
@@ -27,7 +27,7 @@ const LogInScreen = () => {
             autoFocus
             type="email"
             value={email}
-            onChangeText={(text) =>setEmail(text)}
+            onChangeText={(text) => setEmail(text)}
           />
           <Input
             placeholder="Password"
@@ -38,9 +38,14 @@ const LogInScreen = () => {
           />
         </View>
 
-        <Button containerStyle={styles.button} onPress={signIn} title="Login"/>
-        <Button containerStyle={styles.button} type="outline" title="Register"/>
-        <View style={{ height: 100}}/>
+        <Button containerStyle={styles.button} onPress={signIn} title="Login" />
+        <Button
+          onPress= {() => navigation.navigate("Register") }
+          containerStyle={styles.button}
+          type="outline"
+          title="Register"
+        />
+        <View style={{ height: 100 }} />
       </KeyboardAvoidingView>
     );
 }
