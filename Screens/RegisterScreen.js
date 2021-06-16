@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { KeyboardAvoidingView } from "react-native";
 import { StatusBar } from "expo-status-bar";
@@ -9,9 +9,15 @@ const RegisterScreen = ({navigation}) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [imageUrl, setImageUrl] = useState("");
+   
+
+    useLayoutEffect(() => { 
+      navigation.setOptions({
+        headerBackTitle:"Login Screen",
+      });
+    }, [navigation]);
+
     const register = () =>{};
-
-
     return (
       <KeyboardAvoidingView behavior="padding" style={styles.container}>
         <StatusBar style="light" />
@@ -60,7 +66,7 @@ const RegisterScreen = ({navigation}) => {
     );
 }
 
-export default RegisterScreen
+export default RegisterScreen;
 
 const styles = StyleSheet.create({
     container:{
@@ -70,5 +76,14 @@ const styles = StyleSheet.create({
         padding: 10,
         backgroundColor: "white",
     },
+
+  button:{
+    width: 200,
+    marginTop: 10,
+  },
+
+  inputContainer:{
+    width: 300,
+  },
 
 })
