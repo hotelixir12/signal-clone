@@ -12,6 +12,7 @@ const LogInScreen = ({navigation}) => {
     
     useEffect(() => {
       const unsubscribe = auth.onAuthStateChanged((authUser) => {
+        console.log(authUser);
           if (authUser){
             navigation.replace("Home");
           }
@@ -19,7 +20,7 @@ const LogInScreen = ({navigation}) => {
 
       return unsubscribe;
     }, []);
-
+    
     const signIn = () => {
 
     }

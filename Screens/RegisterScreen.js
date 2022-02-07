@@ -26,7 +26,7 @@ const RegisterScreen = ({navigation}) => {
         })
       }).catch(error => alert(error.message))
     };
-    return (
+    return ( 
       <KeyboardAvoidingView behavior="padding" style={styles.container}>
         <StatusBar style="light" />
 
