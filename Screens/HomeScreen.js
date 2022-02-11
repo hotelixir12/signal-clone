@@ -1,11 +1,15 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { SafeAreaView } from 'react-native'
+import { StyleSheet, Text, ScrollView } from 'react-native'
+import CustomListItem from '../componets/CustomListItem'
 
 const HomeScreen = () => {
     return (
-        <View>
-            <Text>I am the HomeScreen</Text>
-        </View>
+        <SafeAreaView>
+            <ScrollView>
+                <CustomListItem/>
+            </ScrollView>
+        </SafeAreaView>
     )
 }
 
