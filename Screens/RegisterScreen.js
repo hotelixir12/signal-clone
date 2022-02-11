@@ -1,5 +1,5 @@
-import React, { useLayoutEffect, useState } from 'react'
-import { StyleSheet, View } from 'react-native'
+import React, { useLayoutEffect, useState } from 'react';
+import { StyleSheet, View } from 'react-native';
 import { KeyboardAvoidingView } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { Button, Input, Text } from 'react-native-elements';
